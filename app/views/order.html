@@ -1,19 +1,34 @@
+<h2> Food Tracking </h2>
 <div class="row">
   <div class="col-md-2" ng-repeat="(day, menuCategory) in order.list">
-    <p> {{day}} <p>
-      <dl>
-        <dt>BreakFast</dt>
-        <dd>
+    <div class="day"> <p>{{day}}</p> </div>
+    <dl>
+      <dt>BreakFast</dt>
+      <dd class="dd">
           {{ menuCategory.breakfast }}
-        </dd>
-        <dt>Lunch</dt>
-        <dd>
+      </dd>
+      <dt>Lunch</dt>
+      <dd class="dd">
           {{ menuCategory.lunch }}
-        </dd>
-        <dt>Dinner</dt>
-        <dd>
+      </dd>
+      <dt>Dinner</dt>
+      <dd class="dd">
           {{ menuCategory.dinner}}
-        </dd>
-      </dl>
+      </dd>
+    </dl>
+    <p ng-if ="menuCategory.calories > 0"> Total calories: {{menuCategory.calories}} </p>
+  </div>
+
+</div>
+<div class="row">
+  <div class="well">
+    <select ng-model="order.activeDay" name="">
+      <option value="Monday">Monday</option>
+      <option value="Tuesday">Tuesday</option>
+      <option value="Wednesday">Wednesday</option>
+      <option value="Thursday">Thursday</option>
+      <option value="Friday">Friday</option>
+    </select>
+    <button ng-click="order.setActiveDay(order.activeDay)">Set active day</button>
   </div>
 </div>

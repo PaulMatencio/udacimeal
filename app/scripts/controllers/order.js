@@ -8,6 +8,16 @@
  * Controller of the udaciMealsApp
  */
 angular.module('udaciMealsApp')
-  .controller('OrderCtrl',['orderManager', function (orderManager) {
-    this.list = orderManager.getOrders('')
+  .controller('OrderCtrl',['orderManager','foodFinder', function (orderManager,menu) {
+
+      this.list = orderManager.getOrders(''); // request data ftom ordermanager service
+
+      this.activeDay = orderManager.getActiveDay();
+
+
+      this.setActiveDay = function() {
+        console.log(this.activeDay);
+        orderManager.setActiveDay(this.activeDay) ;
+      };
+
   }]);

@@ -14,9 +14,9 @@
     "rating" : 4.6
   },
   {
-    "id" :  "ham-goatcheese-croissant",
-    "name" : "ham goatcheese croissant",
-    "img" : "ham-gostcheese-croissant.jpg",
+    "id" :  "Ham-goatcheese-croissant",
+    "name" : "Ham goatcheese croissant",
+    "img" : "ham-goatcheese-croissant.jpg",
     "calories" : 690,
     "rating" : 3.6
   }
