@@ -30,11 +30,11 @@ angular.module('udaciMealsApp')
     });
 
     this.increment = function(item) {
-      item.rating = ( (item.rating *50) + 1)/50;
+      item.rating = (((item.rating * 50) + 1)/50).toPrecision(3);
     };
 
     this.decrement = function(item) {
-      item.rating = ((item.rating *50) - 1)/50;
+      item.rating = (((item.rating * 50) - 1)/50).toPrecision(3);
     };
 
     this.ChooseItem = function(menuCategory,menuItem) {
