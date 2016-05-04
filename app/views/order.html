@@ -1,4 +1,4 @@
-<h2> Weekly food tracking</h2>
+<h2 class="center"> Weekly food tracking</h2>
 <div class="row">
   <div class="col-md-2" ng-repeat="(day, menuCategory) in order.list" ng-click="order.setActiveDay(day)">
     <div class="day"> <p>{{day}}</p> </div>
@@ -16,5 +16,7 @@
           {{ menuCategory.dinner.name}}
       </dd>
     </dl>
-    <p ng-if ="menuCategory.calories > 0"> Total calories: {{menuCategory.calories}} </p>
+    <p ng-if ="menuCategory.calories > 0"> Calories: {{menuCategory.calories}} </p>
+    <p ng-if ="menuCategory.price > 0"> Price: {{menuCategory.price}} $</p>
+    <hr>
   </div>

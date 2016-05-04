@@ -19,33 +19,48 @@ angular.module('udaciMealsApp')
         breakfast: {},
         lunch: {},
         dinner: {},
-        calories: 0
+        calories: 0,
+        price: 0
       },
       Tuesday: {
         breakfast: {},
         lunch: {},
         dinner: {},
-        calories: 0
+        calories: 0,
+        price: 0
       },
       Wednesday: {
         breakfast: {},
         lunch: {},
         dinner: {},
-        calories: 0
+        calories: 0,
+        price: 0
       },
       Thursday: {
         breakfast: {},
         lunch: {},
         dinner: {},
-        calories: 0
+        calories: 0,
+        price: 0
       },
       Friday: {
         breakfast: {},
         lunch: {},
         dinner: {},
-        calories: 0
+        calories: 0,
+        price: 0
+      },
+      Saturday: {
+        breakfast: {},
+        lunch: {},
+        dinner: {},
+        calories: 0,
+        price: 0
       }
+
+
     };
+
 
 
     this.getActiveDay = function(){
@@ -59,13 +74,17 @@ angular.module('udaciMealsApp')
     this.chooseMenuOption = function(menuCategory, menuitem) {
 
       if ( typeof menuCategory !== 'undefined') {
-        var menuCategory1 = orderSelection[this.selectedDay][menuCategory].calories;
-        if (typeof menuCategory1 !== 'undefined') {
-          orderSelection[this.selectedDay].calories -= menuCategory1.calories;
+        var menuCalory = orderSelection[this.selectedDay][menuCategory].calories;
+
+        if (typeof menuCalory !== 'undefined') {
+          orderSelection[this.selectedDay].calories -= menuCalory ;
         }
-        orderSelection[this.selectedDay][menuCategory].name = menuitem.name;
+        orderSelection[this.selectedDay][menuCategory].name     = menuitem.name;
         orderSelection[this.selectedDay][menuCategory].calories = menuitem.calories;
-        orderSelection[this.selectedDay].calories += menuitem.calories;
+        orderSelection[this.selectedDay][menuCategory].price = menuitem.price;
+        orderSelection[this.selectedDay].calories   +=   menuitem.calories;
+        orderSelection[this.selectedDay].price   +=  menuitem.price;
+        console.log(orderSelection[this.selectedDay]);
       }
     };
 
@@ -74,6 +93,7 @@ angular.module('udaciMealsApp')
         orderSelection[this.selectedDay][menuCategory]= {};
         if ( orderSelection[this.selectedDay].calories > 0) {
           orderSelection[this.selectedDay].calories -= menuitem.calories;
+          orderSelection[this.selectedDay].price -= menuitem.price;
         }
       }
     };

@@ -38,17 +38,11 @@ angular.module('udaciMealsApp')
     };
 
     this.ChooseItem = function(menuCategory,menuItem) {
-      // console.log(order.selectedDay, menuCategory,menuItemName);
       order.chooseMenuOption(menuCategory,menuItem); // (breakfast, strawberry-pudding),( )
     };
 
     this.RemoveItem = function(menuCategory,menuItem) {
       order.removeMenuOption(menuCategory,menuItem);
     };
-    /*
-      this.xxxx = menu.xxxx;
-      this.wwww = order.wwww;
-
-    */
-
+    
   }]);

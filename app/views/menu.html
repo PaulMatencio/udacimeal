@@ -2,22 +2,28 @@
   <div class="items-container" ng-repeat="item in menu.items">
     <div class="col-md-4">
       <img class="item__image" ng-src="images/{{item.img}}" alt="{{item.name}}"> </img>
-      <dl>
+      <dl class="dl">
         <dt>{{item.name}}</dt>
           <dd class="dd">Calories: {{item.calories}} </dd>
           <dd class="dd">Price: {{item.price}}$ </dd>
           <dd class="dd">Rating:{{item.rating}} <span ng-if="item.rating > 4.5" ng-class="{highlight: item.rating >= 4.6}" > People Love it </span></dd>
+        </dt>
       </dl>
-      <button ng-click="menu.increment(item)">+</button>
-      <button ng-click="menu.decrement(item)">-</button>
+      <p>
+        <span>Rating:</span>
+        <button ng-click="menu.increment(item)">+</button>
+        <button ng-click="menu.decrement(item)">-</button>
+     </p>
+      <hr>
       <div class="well">
-        <select ng-model="item.meal" name="">
+        <span>Compose your menu</span>
+        <select ng-model="item.meal" ng-options="breakfast">
           <option value="breakfast">Breakfast</option>
           <option value="lunch">Lunch</option>
           <option value="dinner">Dinner</option>
         </select>
-        <button ng-click="menu.ChooseItem(item.meal,item)">Add Item</button>
-        <button ng-click="menu.RemoveItem(item.meal,item)">Rem Item</button>
+        <button ng-click="menu.ChooseItem(item.meal,item)">+</button>
+        <button ng-click="menu.RemoveItem(item.meal,item)">-</button>
       </div>
     </div>
   </div>
