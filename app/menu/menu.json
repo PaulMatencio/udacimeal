@@ -1,9 +1,10 @@
 [
   {
     "id" :  "chicken-pomegranate-salad",
-    "name" : "chicken pomegranate salad",
+    "name" : "Chicken pomegranate salad",
     "img" : "chicken-pomegranate-salad.jpg",
     "calories" : 430,
+    "price": 10,
     "rating" : 4.2
   },
   {
@@ -11,13 +12,15 @@
     "name" : "Strawberry pudding",
     "img" : "strawberry-pudding.jpg",
     "calories" : 200,
+    "price": 5,
     "rating" : 4.6
   },
   {
-    "id" :  "Ham-goatcheese-croissant",
+    "id" :  "ham-goatcheese-croissant",
     "name" : "Ham goatcheese croissant",
     "img" : "ham-goatcheese-croissant.jpg",
     "calories" : 690,
+    "price": 5,
     "rating" : 3.6
   }
 ]

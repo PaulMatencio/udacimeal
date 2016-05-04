@@ -45,5 +45,10 @@ angular.module('udaciMealsApp')
     this.RemoveItem = function(menuCategory,menuItem) {
       order.removeMenuOption(menuCategory,menuItem);
     };
+    /*
+      this.xxxx = menu.xxxx;
+      this.wwww = order.wwww;
+
+    */
 
   }]);

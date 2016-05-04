@@ -2,8 +2,12 @@
   <div class="items-container" ng-repeat="item in menu.items">
     <div class="col-md-4">
       <img class="item__image" ng-src="images/{{item.img}}" alt="{{item.name}}"> </img>
-      <h4>{{item.name}}</h4>
-      <p>Rating:{{item.rating}} <span ng-if="item.rating > 4.5" ng-class="{highlight: item.rating >= 4.6}" > People Love it </span></p>
+      <dl>
+        <dt>{{item.name}}</dt>
+          <dd class="dd">Calories: {{item.calories}} </dd>
+          <dd class="dd">Price: {{item.price}}$ </dd>
+          <dd class="dd">Rating:{{item.rating}} <span ng-if="item.rating > 4.5" ng-class="{highlight: item.rating >= 4.6}" > People Love it </span></dd>
+      </dl>
       <button ng-click="menu.increment(item)">+</button>
       <button ng-click="menu.decrement(item)">-</button>
       <div class="well">
