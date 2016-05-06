@@ -1,0 +1,14 @@
+{
+  "id" :  "ham-goatcheese-croissant",
+  "name": "Ham goatcheese croissant",
+  "img": "ham-goatcheese-croissant.jpg",
+  "calories" : 690,
+  "price": 5,
+  "rating": 3.6,
+  "description": "toasted croissant goat cheese on five-grain with arugula, frisée, seasonal fruit, walnuts and apple-date vinaigrette",
+  "reviews": [
+    "delcious. I love it",
+    "very good, I recommend it",
+    "not bad"
+  ]
+}

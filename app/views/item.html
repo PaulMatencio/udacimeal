@@ -1,0 +1,8 @@
+<h3>{{item.data.name}}</h3>
+<img class="item__images" ng-src="images/{{item.data.img}}" alt="{{item.data.name}}">
+<!--dl>
+  <dt> Description</dt>
+  <dd> {{item.data.description}}</dd>
+</dl-->
+<p><a ui-sref='item.description'>Description</a>-<a ui-sref="item.nutrition">Nutrition</a>-<a ui-sref="item.reviews">Reviews</a></p>
+<div ui-view></div>

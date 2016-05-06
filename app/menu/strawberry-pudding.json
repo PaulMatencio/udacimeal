@@ -1,0 +1,14 @@
+{
+  "id" :  "strawberry-pudding",
+  "name" : "Strawberry pudding",
+  "img" : "strawberry-pudding.jpg",
+  "calories" : 200,
+  "price": 5,
+  "rating" : 4.6,
+  "description": "This strawberry-pudding is the perfect dessert.  The berry flavor is present, but not overwhelming, and the pudding is extremely creamy and delicious.",
+  "reviews": [
+    "delcious. I love it",
+    "very good, I recommend it",
+    "not bad"
+  ]
+}

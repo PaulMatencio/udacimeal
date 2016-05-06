@@ -1,23 +1,28 @@
-<div class="row">
+<div id="menu" class="row">
   <div class="items-container" ng-repeat="item in menu.items">
-    <div class="col-md-4">
+    <div class="well col-md-4">
       <img class="item__image" ng-src="images/{{item.img}}" alt="{{item.name}}"> </img>
-      <dl class="dl">
+      <!--  item is state name ,  id:item.id is state parameter-->
+      <h4><a ui-sref="item({id:item.id})">{{item.name}}</a></h4>
+
+      <!--dl class="dl">
         <dt>{{item.name}}</dt>
           <dd class="dd">Calories: {{item.calories}} </dd>
           <dd class="dd">Price: {{item.price}}$ </dd>
           <dd class="dd">Rating:{{item.rating}} <span ng-if="item.rating > 4.5" ng-class="{highlight: item.rating >= 4.6}" > People Love it </span></dd>
         </dt>
-      </dl>
+      </dl-->
       <p>
-        <span>Rating:</span>
+        Rating:{{item.rating}} <span ng-if="item.rating > 4.5" ng-class="{highlight: item.rating >= 4.6}" > People Love it </span>
+        <!--span>Rating:</span-->
+        <br>
         <button ng-click="menu.increment(item)">+</button>
         <button ng-click="menu.decrement(item)">-</button>
-     </p>
+      </p>
       <hr>
       <div class="well">
         <span>Compose your menu</span>
-        <select ng-model="item.meal" ng-options="breakfast">
+        <select ng-model="item.meal">
           <option value="breakfast">Breakfast</option>
           <option value="lunch">Lunch</option>
           <option value="dinner">Dinner</option>

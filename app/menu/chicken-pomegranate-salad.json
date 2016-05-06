@@ -1,0 +1,14 @@
+{
+  "id" :  "chicken-pomegranate-salad",
+  "name" : "Chicken pomegranate salad",
+  "img" : "chicken-pomegranate-salad.jpg",
+  "calories" : 430,
+  "price": 10,
+  "rating" : 4.2,
+  "description": "This Chicken  Salad with Pomegranate  is the perfect fresh salad that still incorporates some of fall’s goodies. Olive oil, salt & peeper, and a ton of italian seasoning, so that it almost forms a crust. So flavorful, and it can be added to a variety of salads or cut up for sandwiches.",
+  "reviews": [
+    "delcious. I love it",
+    "very good, I recommend it",
+    "not bad"
+  ]
+}
