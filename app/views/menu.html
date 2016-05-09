@@ -4,14 +4,6 @@
       <img class="item__image" ng-src="images/{{item.img}}" alt="{{item.name}}"> </img>
       <!--  item is state name ,  id:item.id is state parameter-->
       <h4><a ui-sref="item({id:item.id})">{{item.name}}</a></h4>
-
-      <!--dl class="dl">
-        <dt>{{item.name}}</dt>
-          <dd class="dd">Calories: {{item.calories}} </dd>
-          <dd class="dd">Price: {{item.price}}$ </dd>
-          <dd class="dd">Rating:{{item.rating}} <span ng-if="item.rating > 4.5" ng-class="{highlight: item.rating >= 4.6}" > People Love it </span></dd>
-        </dt>
-      </dl-->
       <p>
         Rating:{{item.rating}} <span ng-if="item.rating > 4.5" ng-class="{highlight: item.rating >= 4.6}" > People Love it </span>
         <!--span>Rating:</span-->
